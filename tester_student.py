@@ -79,8 +79,7 @@ def barcode_digits2binary(barcode_12: str) -> str:
 
 def generate_barcode_12(item_type: str):
     """Given a item type (product, coupon, or membership), generate a barcode\
-        12. It's currently generatina a numeric barcode that is not valid.\
-        Update it to generate a valid numeric barcode.
+        12. 
 
     Args:
         item_type (str): The type of item to generate a barcode for.

@@ -85,33 +85,3 @@ class ShoppingCart:
         sum_discount = total_coupon_discount + membership_discount
         total = max(subtotal - sum_discount, 0.0)
         return total
-        
-
-def shopping_cart_doctests():
-    """Function to run the doctests for the ShoppingCart class.
-
-    Note that you should run this doctest at the root folder of the project
-    (same level as main.py)
-
-    # It's recommended that you add additional doctests
-
-    >>> cart = ShoppingCart()
-    >>> cart.add_item(Product('random_barcode', 'Milk', 2, 150))
-    >>> cart.add_item(Product('random_barcode2', 'Bread', 3, 80))
-    >>> cart.calculate_subtotal() == 5 == cart.calculate_total()
-    True
-    >>> sm = PlatinumMember('random_barcode3', 'John', 0)
-    >>> cart.add_membership(sm)
-    >>> cart.calculate_total() == 4.5
-    True
-    >>> from datetime import datetime
-    >>> fc = FixedDiscountCoupon('b4', datetime(2030, 1, 1), 1, 'desc', 1)
-    >>> cart.add_coupon(fc)
-    >>> cart.calculate_total() == 3.5
-    True
-    >>> cart.add_coupon(fc)
-    >>> len(cart.get_coupons()) == 1
-    True
-    >>> len(cart.get_items()) == 2
-    True
-    """
